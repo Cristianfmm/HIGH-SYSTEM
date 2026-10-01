@@ -1,0 +1,238 @@
+<div class="hs-login-page">
+
+  <!-- Fondo decorativo -->
+  <div class="hs-bg-overlay"></div>
+  <div class="hs-bg-green"></div>
+  <div class="hs-bg-gold"></div>
+
+  <main class="hs-login-layout">
+
+    <!-- PANEL IZQUIERDO -->
+    <section class="hs-brand-panel">
+
+      <!-- Imagen del instituto -->
+      <div class="hs-campus-background"></div>
+      <div class="hs-campus-overlay"></div>
+
+      <div class="hs-brand-content">
+
+        <!-- Logo -->
+        <div class="hs-logo">
+          <img src="images/escudo.png" alt="High System">
+        </div>
+
+        <h1>High <span>System</span></h1>
+
+        <p class="hs-platform-title">
+          Plataforma Educativa
+        </p>
+
+        <div class="hs-gold-line"></div>
+
+        <p class="hs-description">
+          Conectamos estudiantes, familias y docentes en un solo lugar
+          para una educación más simple, organizada y efectiva.
+        </p>
+
+        <!-- Características -->
+        <div class="hs-features">
+
+          <div class="hs-feature">
+            <div class="hs-feature-icon">
+              <i class="fa fa-graduation-cap"></i>
+            </div>
+            <span>Gestión<br>Académica</span>
+          </div>
+
+          <div class="hs-feature">
+            <div class="hs-feature-icon">
+              <i class="fa fa-users"></i>
+            </div>
+            <span>Comunicación<br>en Tiempo Real</span>
+          </div>
+
+          <div class="hs-feature">
+            <div class="hs-feature-icon">
+              <i class="fa fa-bar-chart"></i>
+            </div>
+            <span>Seguimiento<br>de Progreso</span>
+          </div>
+
+        </div>
+
+        <div class="hs-motto">
+          <strong>High System</strong>
+          <span>Superación es la base del éxito</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PANEL LOGIN -->
+    <section class="hs-login-panel">
+
+      <div class="hs-login-card">
+
+        <div class="hs-login-header">
+
+          <div class="hs-header-line"></div>
+
+          <h2>
+            Iniciar <span>Sesión</span>
+          </h2>
+
+          <p>
+            Ingresa a tu cuenta para continuar
+          </p>
+
+        </div>
+
+        <form id="form_login">
+
+          <!-- USUARIO -->
+          <div class="hs-form-group">
+
+            <label for="inputUser">
+              <i class="fa fa-user"></i>
+              Usuario
+            </label>
+
+            <div class="hs-input-wrapper">
+
+              <i class="fa fa-user hs-input-icon"></i>
+
+              <input
+                type="text"
+                class="form-control"
+                id="inputUser"
+                aria-describedby="userHelp"
+                placeholder="Usuario"
+                onkeypress="return validar(event)"
+                autocomplete="off"
+              >
+
+            </div>
+
+          </div>
+
+          <!-- CONTRASEÑA -->
+          <div class="hs-form-group">
+
+            <label for="inputPassword">
+              <i class="fa fa-lock"></i>
+              Contraseña
+            </label>
+
+            <div class="hs-input-wrapper">
+
+              <i class="fa fa-lock hs-input-icon"></i>
+
+              <input
+                type="password"
+                class="form-control"
+                id="inputPassword"
+                placeholder="Contraseña"
+              >
+
+              <!-- Icono visual del ojo -->
+              <i class="fa fa-eye-slash hs-password-eye"></i>
+
+            </div>
+
+          </div>
+
+          <!-- TIPO DE USUARIO -->
+          <div class="hs-login-type">
+
+            <span class="hs-type-title">
+              Ingresar como
+            </span>
+
+            <div class="hs-type-options">
+
+              <label
+                class="type_session hs-type-option active"
+                data-val="1"
+              >
+
+                <input
+                  class="form-control"
+                  type="radio"
+                  name="type_session"
+                >
+
+                <i class="fa fa-users"></i>
+
+                <span>
+                  Comunidad
+                </span>
+
+              </label>
+
+              <label
+                class="type_session hs-type-option"
+                data-val="2"
+              >
+
+                <input
+                  class="form-control"
+                  type="radio"
+                  name="type_session"
+                >
+
+                <i class="fa fa-user"></i>
+
+                <span>
+                  Estudiante
+                </span>
+
+              </label>
+
+            </div>
+
+          </div>
+
+          <!-- BOTÓN -->
+          <button
+            type="submit"
+            class="hs-login-button"
+            id="btnSubmit"
+          >
+
+            <span>
+              Ingresar
+            </span>
+
+            <i class="fa fa-arrow-right"></i>
+
+          </button>
+
+          <!-- SEPARADOR -->
+          <div class="hs-divider">
+            <span>o</span>
+          </div>
+
+          <!-- RECUPERACIÓN -->
+          <div class="hs-forgot">
+
+            <a href="#" id="buttonPass">
+              ¿Olvidó su contraseña?
+            </a>
+
+          </div>
+
+        </form>
+
+        <div id="loader"></div>
+
+        <div class="hs-card-footer">
+          © <span id="year"></span> High System
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>

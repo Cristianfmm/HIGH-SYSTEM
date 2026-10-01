@@ -1,0 +1,122 @@
+<div id="hs-app">
+
+    <!-- SIDEBAR -->
+    <aside class="hs-sidebar" id="hsSidebar">
+        <div class="hs-brand">
+            <img src="images/escudo.png" alt="High System">
+            <div><strong>HIGH SYSTEM</strong><span>Comunidad Virtual</span></div>
+        </div>
+
+        <div class="hs-nav-title">Menú</div>
+        <nav class="hs-nav">
+            <a href="#" id="navHome" class="hs-nav-item active"><i class="fa fa-home"></i><span>Inicio</span></a>
+            <a href="#" id="link_clases" class="hs-nav-item d-none"><i class="fa fa-video"></i><span>Clase Virtual</span></a>
+        </nav>
+
+        <div class="hs-nav-title">Mis módulos <em id="navCount"></em></div>
+        <!-- Se llena desde la base de datos (loadView) -->
+        <nav class="hs-nav hs-nav-modules" id="sidebarModules"></nav>
+
+        <div class="hs-sidebar-foot">
+            <p>Formación para un mejor mañana</p>
+            <a href="#" id="closeView" class="hs-logout"><i class="fa fa-right-from-bracket"></i><span>Cerrar sesión</span></a>
+        </div>
+    </aside>
+
+    <div id="sidebarOverlay" class="hs-overlay"></div>
+
+    <!-- MAIN -->
+    <main class="hs-main">
+
+        <header class="hs-header">
+            <button type="button" id="sidebarToggle" class="hs-burger" aria-label="Abrir menú">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="hs-search">
+                <i class="fa fa-search"></i>
+                <input type="text" id="globalSearch" placeholder="Buscar módulo..." autocomplete="off">
+                <kbd>Ctrl K</kbd>
+            </div>
+
+            <div class="hs-actions">
+                <button type="button" class="hs-icon-btn" aria-label="Notificaciones">
+                    <i class="fa fa-bell"></i><span class="hs-dot d-none" id="notifTotal">0</span>
+                </button>
+                <div class="hs-user">
+                    <img id="headerUserImage" src="" alt="Usuario">
+                    <div>
+                        <strong id="headerUserName">Usuario</strong>
+                        <span id="headerUserProfile">Comunidad Virtual</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="hs-content">
+
+            <!-- HERO -->
+            <section class="hs-hero">
+                <div>
+                    <span class="hs-hero-label">BIENVENIDO A TU</span>
+                    <h1>Comunidad Virtual</h1>
+                    <p>Un espacio para aprender, comunicar y crecer juntos.</p>
+                </div>
+                <div class="hs-hero-quote">
+                    <i class="fa fa-quote-left"></i>
+                    El esfuerzo de hoy construye los logros del mañana.
+                </div>
+            </section>
+
+            <!-- PERFIL -->
+            <section id="cardInfo" class="hs-card hs-profile">
+                <div class="hs-profile-photo">
+                    <img id="image" src="" alt="Usuario sin foto">
+                    <span class="hs-status"></span>
+                </div>
+
+                <div class="hs-profile-body">
+                    <span class="hs-greeting">Hola,</span>
+                    <h2 id="name">Usuario</h2>
+                    <div class="hs-tags">
+                        <span class="hs-tag hs-tag-green"><i class="fa fa-graduation-cap"></i><span id="profile">Estudiante</span></span>
+                        <span id="dis" class="hs-tag hs-tag-gold"><i class="fa fa-users"></i><span id="course">-</span></span>
+                    </div>
+                </div>
+
+                <div class="hs-stats">
+                    <div class="hs-stat"><i class="fa fa-calendar"></i><div><span>Año académico</span><strong>2025</strong></div></div>
+                    <div class="hs-stat"><i class="fa fa-star"></i><div><span>Perfil</span><strong id="profileInfo">Estudiante</strong></div></div>
+                    <div class="hs-stat"><i class="fa fa-book-open"></i><div><span>Curso</span><strong id="courseInfo">-</strong></div></div>
+                </div>
+            </section>
+
+            <!-- MÓDULOS -->
+            <section id="cardModules" class="hs-card hs-modules">
+                <div class="hs-modules-head">
+                    <div>
+                        <h3>Mis módulos</h3>
+                        <p>Accede rápidamente a los módulos disponibles</p>
+                    </div>
+                    <div class="hs-tools">
+                        <div class="hs-filter">
+                            <i class="fa fa-search"></i>
+                            <input id="filter" type="text" placeholder="Buscar módulo" autocomplete="off">
+                        </div>
+                        <div class="hs-toggle">
+                            <button type="button" class="hs-view-button active" data-view="grid" aria-label="Cuadrícula"><i class="fa fa-th-large"></i></button>
+                            <button type="button" class="hs-view-button" data-view="list" aria-label="Lista"><i class="fa fa-list"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hs-module-grid bodyCard"></div>
+            </section>
+
+        </section>
+
+        <footer class="hs-footer">
+            <span>© High System</span>
+            <span>Formación para un mejor mañana</span>
+        </footer>
+    </main>
+</div>

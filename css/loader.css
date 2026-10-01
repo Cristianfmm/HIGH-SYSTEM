@@ -1,0 +1,46 @@
+/* =========================================================
+   HIGH SYSTEM - LOADER
+   Mantiene las clases originales: .loader y .loaderMain
+   ========================================================= */
+
+:root {
+  --hs-green: #16864d;
+  --hs-gold: #e4b72d;
+}
+
+.loader {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 3px solid rgba(22, 134, 77, 0.16);
+  border-top-color: var(--hs-green);
+  border-right-color: var(--hs-green);
+  border-radius: 50%;
+  animation: hs-spin 0.75s linear infinite;
+  vertical-align: middle;
+}
+
+.loaderMain {
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 8px solid rgba(22, 134, 77, 0.12);
+  border-top-color: var(--hs-green);
+  border-right-color: var(--hs-gold);
+  border-radius: 50%;
+  animation: hs-spin 0.8s linear infinite;
+}
+
+@keyframes hs-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader,
+  .loaderMain {
+    animation-duration: 1.8s;
+  }
+}
